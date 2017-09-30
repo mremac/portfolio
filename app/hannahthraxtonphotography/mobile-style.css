@@ -1,0 +1,171 @@
+
+div {
+  margin: 200px;
+}
+img {
+  height: 200px;
+  width: 200px; 
+}
+a {
+  margin: 0px;
+}
+#wrapper {
+  height: 400px;
+  width: 800px;
+  position: absolute;
+  margin: 0 calc(50% - 400px) 0 calc(50% - 400px);
+}
+#sampler {
+  animation: picture-change 60s infinite;
+}
+
+#thumbwrap {
+	position:absolute;
+	margin:500px 5% 0 5%;
+	width: 90%; height:600px;
+}
+.thumb img { 
+	border:1px solid #000;
+	margin:3px;
+	float:left;
+}
+.thumb span { 
+	position:absolute;
+	visibility:hidden;
+}
+.thumb:hover, .thumb:hover span { 
+	visibility:visible;
+	top:0; left:250px; 
+	z-index:1;
+}
+
+span img {
+	position: absolute;
+	top: 0;
+	margin: auto;
+	height: 400px;
+	width: 800px;
+}
+
+
+
+
+
+
+
+
+/*ANIMATIONS*/
+@keyframes spin-change {
+  0%  {
+    border-radius:50%;
+    width: 0;
+    height: 100px;
+    margin: 150px auto auto 400px;
+  }
+  5%  {
+    border-radius:50%;
+    width: 100px;
+    margin: 150px auto auto 350px;
+  }
+  10%  {
+    border-radius:50%;
+    width: 0;
+    height: 100px;
+    margin: 150px auto auto 400px;
+  }
+  15%  {
+    border-radius:50%;
+    width: 100px;
+    margin: 150px auto auto 350px;
+  }
+  20%  {
+    border-radius:50%;
+    width: 0;
+    height: 100px;
+    margin: 150px auto auto 400px;
+  }
+  25%  {
+    border-radius:50%;
+    width: 100px;
+    margin: 150px auto auto 350px;
+  }
+  30%  {
+    border-radius:50%;
+    width: 0;
+    margin: 150px auto auto 400px;
+  }
+  35%  {
+    border-radius:50%;
+    width: 100px;
+    margin: 150px auto auto 350px;
+  }
+  40%  {
+    border-radius:50%;
+    width: 0;
+    margin: 150px auto auto 400px;
+  }
+  45%  {
+    border-radius:50%;
+    width: 100px;
+    margin: 150px auto auto 350px;
+  }
+  50%  {
+    border-radius:50%;
+    width: 0;
+    height:100px;
+    margin: 150px auto auto 400px;
+  }
+  55%  {
+    border-radius:50%;
+    width: 100px;
+    margin: 150px auto auto 350px;
+  }
+  60%  {
+    border-radius:50%;
+    width: 0;
+    height: 100px;
+    margin: 150px auto auto 400px;
+  }
+  65%  {
+    border-radius:50%;
+    width: 100px;
+    margin: 150px auto auto 350px;
+  }
+  70%  {
+    border-radius:50%;
+    width: 0;
+    height: 100px;
+    margin: 150px auto auto 400px;
+  }
+  75%  {
+    border-radius:50%;
+    width: 100px;
+    margin: 150px auto auto 350px;
+  }
+  80%  {
+    border-radius:50%;
+    width: 0;
+    margin: 150px auto auto 400px;
+  }
+  85%  {
+    border-radius:50%;
+    width: 100px;
+    margin: 150px auto auto 350px;
+  }
+  90%  {
+    border-radius:50%;
+    width: 0;
+    margin: 150px auto auto 400px;
+  }
+  95%  {
+    border-radius:50%;
+    width: 100px;
+    margin: 150px auto auto 350px;
+  }
+  100%  {
+    border-radius:50%;
+    width: 0;
+    height:100px;
+    margin: 150px auto auto 400px;
+  }
+}

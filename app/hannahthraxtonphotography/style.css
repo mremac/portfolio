@@ -1,0 +1,265 @@
+ body {
+  overflow-y: scroll;
+  background: #010101;
+  text-align: center;
+}
+p {
+  font-family: 'Katibeh', cursive;
+  color: indianred;
+}
+h1 {
+font-family: 'Permanent Marker', cursive;
+  color: indianred;
+}
+h2 {
+  font-family: 'Quattrocento Sans', sans-serif;
+  color: indianred;
+}
+
+@media only screen and (min-width: 820px) { 
+
+.contact_link img {
+  height: 50px;
+  width: 50px;
+}
+
+
+.slidespinner {
+  height: 200px;
+  width: 200px;
+  background-color: indianred;
+  animation: spin-change 6s infinite; 
+}
+div {
+  margin: 200px;
+}
+img {
+  height: 200px;
+  width: 200px; 
+}
+a {
+  margin: 0px;
+}
+#wrapper {
+  height: 400px;
+  width: 800px;
+  position: absolute;
+  margin: 0 calc(50% - 400px) 0 calc(50% - 400px);
+}
+
+.contact_link img path {
+  fill: #cd5c5c;
+}
+
+.contact_link {
+  height: 50px;
+  width: 50px;
+  margin: auto 20px auto 20px;
+}
+#sampler {
+  animation: picture-change 60s infinite;
+}
+
+#thumbwrap {
+	position:absolute;
+	margin:500px 5% 0 5%;
+	width: 90%; height:600px;
+}
+.thumb img { 
+	margin:15px;
+	float:left;
+}
+.thumb span {
+	position:relative;
+	left: -500px;
+	visibility:hidden;
+}
+.thumb:hover, .thumb:hover span { 
+	visibility:visible;
+	top:0; left:250px; 
+	z-index:1;
+}
+
+span img {
+	border:40px solid rgba(1, 1, 1, 0.4);
+	position: fixed;
+	top: 10%;
+	left: 10%;
+	height: 400px;
+	width: 800px;
+}
+}
+
+@media only screen and (max-width: 819px) { 
+#sampler {
+  animation: picture-change 60s infinite;
+}
+
+#thumbwrap {
+	position:absolute;
+	margin:500px 5% 0 5%;
+	width: 90%; height:600px;
+}
+.thumb img { 
+	margin:3px;
+	float:left;
+}
+.thumb span { 
+	border:20px solid rgba(0.1 0.1 0.1 0.1);
+	position:absolute;
+	visibility:hidden;
+}
+
+span img {
+	border:40px solid rgba(1, 1, 1, 0.4);
+	position: fixed;
+	top: 10%;
+	left: 10%;
+	margin: auto;
+	height: 400px;
+	width: 800px;
+}
+
+.contact_link img  {
+  height: 50px;
+  width: 50px;
+  margin: auto 20px auto 20px;
+}
+
+.contact_link {
+  height: 50px;
+  width: 50px;
+}
+}
+
+
+
+
+
+
+
+
+@keyframes picture-change {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
+@keyframes spin-change {
+  0%  {
+    border-radius:50%;
+    width: 0;
+    height: 100px;
+    margin: 150px auto auto 400px;
+  }
+  5%  {
+    border-radius:50%;
+    width: 100px;
+    margin: 150px auto auto 350px;
+  }
+  10%  {
+    border-radius:50%;
+    width: 0;
+    height: 100px;
+    margin: 150px auto auto 400px;
+  }
+  15%  {
+    border-radius:50%;
+    width: 100px;
+    margin: 150px auto auto 350px;
+  }
+  20%  {
+    border-radius:50%;
+    width: 0;
+    height: 100px;
+    margin: 150px auto auto 400px;
+  }
+  25%  {
+    border-radius:50%;
+    width: 100px;
+    margin: 150px auto auto 350px;
+  }
+  30%  {
+    border-radius:50%;
+    width: 0;
+    margin: 150px auto auto 400px;
+  }
+  35%  {
+    border-radius:50%;
+    width: 100px;
+    margin: 150px auto auto 350px;
+  }
+  40%  {
+    border-radius:50%;
+    width: 0;
+    margin: 150px auto auto 400px;
+  }
+  45%  {
+    border-radius:50%;
+    width: 100px;
+    margin: 150px auto auto 350px;
+  }
+  50%  {
+    border-radius:50%;
+    width: 0;
+    height:100px;
+    margin: 150px auto auto 400px;
+  }
+  55%  {
+    border-radius:50%;
+    width: 100px;
+    margin: 150px auto auto 350px;
+  }
+  60%  {
+    border-radius:50%;
+    width: 0;
+    height: 100px;
+    margin: 150px auto auto 400px;
+  }
+  65%  {
+    border-radius:50%;
+    width: 100px;
+    margin: 150px auto auto 350px;
+  }
+  70%  {
+    border-radius:50%;
+    width: 0;
+    height: 100px;
+    margin: 150px auto auto 400px;
+  }
+  75%  {
+    border-radius:50%;
+    width: 100px;
+    margin: 150px auto auto 350px;
+  }
+  80%  {
+    border-radius:50%;
+    width: 0;
+    margin: 150px auto auto 400px;
+  }
+  85%  {
+    border-radius:50%;
+    width: 100px;
+    margin: 150px auto auto 350px;
+  }
+  90%  {
+    border-radius:50%;
+    width: 0;
+    margin: 150px auto auto 400px;
+  }
+  95%  {
+    border-radius:50%;
+    width: 100px;
+    margin: 150px auto auto 350px;
+  }
+  100%  {
+    border-radius:50%;
+    width: 0;
+    height:100px;
+    margin: 150px auto auto 400px;
+  }
+}

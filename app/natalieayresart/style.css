@@ -1,0 +1,182 @@
+body {
+  overflow-y: hidden;
+  background: gainsboro;
+  font-family: 'Proza Libre', sans-serif;
+}
+img {
+  margin: 10px 25px 50px 25px;
+  width: 15vw;
+  height: 15vw;
+  border-radius: 100px;
+}
+a {
+  background-color: burlywood;
+  color: slategrey;
+}
+a:hover { 
+  color: darkred;
+}
+p {
+  margin: 30px auto;
+  color: darkred;
+}
+h1 {
+  color: darksalmon;
+  margin: 30px 0 -25px 0;
+}
+h2 {
+  color: darksalmon;
+}
+#pencils {
+  color: darkred;
+}
+#wrapper {
+  text-align: center;
+}
+#bio {
+  width: 60%;
+  margin: -20px auto;
+  color:darksalmon;
+}
+#scrollmessage {
+  opacity: 0.5;
+}
+#back1:hover #scrollmessage{
+  animation: scrollmessage 1s normal forwards;
+}
+.imga {
+  background-color: rgba(0, 0, 0, 0);
+  text-decoration: none;
+}
+.imga:hover {
+  background-color: rgba(0, 0, 0, 0);
+}
+.imga--icon {
+  height: 30px;
+  width: 30px;
+  margin-top: 40px;
+  background-color: rgba(0, 0, 0, 0);
+}
+.imga--icon:hover {
+  background-color: rgba(0, 0, 0, 0);
+}
+.parallax {
+  perspective: 1px;
+  height: 400px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  border: 5px solid gainsboro;
+}
+.parallax__layer {
+  height: 400px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+}
+.parallax__group {
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.parallax__layer--base {
+  transform: translateZ(0);
+  background: gainsboro;
+}
+
+
+.parallax__layer--back {
+  transform: translateZ(-1px) scale(2);
+  background: silver;
+  margin: 400px 0 0 0;
+}
+
+.parallax__layer--back2 {
+  transform: translateZ(-2px) scale(3);
+  background: grey;
+  margin: 1200px 0 0 0;
+}
+
+.parallax__layer--back3 {
+  transform: translateZ(-3px) scale(4);
+  background: dimgrey;
+  margin: 2400px 0 0 0;
+}
+
+.parallax__layer--back4 {
+  transform: translateZ(-4px) scale(5);
+  background: slategrey;
+  margin: 3600px 0 0 0;
+}
+
+
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(0,0,0, 0.65);
+    overflow-x: hidden;
+    transition: 0.5s;
+    display: none;
+}
+
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay .showcase {
+    display: block;
+    width: 70%;
+    margin: auto;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #a9b8a9;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+.overlay .closebtn:hover {
+  animation: color-ripple 2s forwards;
+}
+
+
+
+
+
+
+
+
+
+@keyframes scrollmessage {
+  0% {
+    opacity: 0.5;
+  }
+  100%{
+    opacity: 0;
+  }
+}

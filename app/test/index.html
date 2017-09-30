@@ -1,0 +1,47 @@
+<html>
+<head>
+<title>TEST PAGE</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="menu.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-hQpvDQiCJaD2H465dQfA717v7lu5qHWtDbWNPvaTJ0ID5xnPUlVXnKzq7b8YUkbN" crossorigin="anonymous">
+    <link href="https://wtlv1-d0df.restdb.io/assets/css/jquery.datetimepicker.min.css" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="http://www.ericinbrackets.co/favicon.png">
+    <script type="text/javascript" src="processing.js"></script>
+
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+      $( function() {
+        $( "#slider" ).slider();
+        $("#inputA").val(1);
+        $("#inputB").val(3);
+        $("#inputC").val(3);
+        $("#inputD").val(3);
+        $("#inputE").val(1);
+      } );
+    </script>
+</head>
+<body class="page">
+    <canvas id="canvas" name="static-warp" data-processing-sources="static-warp.pde"></canvas>
+    <button class="btn" onclick="nextSketch()">NEXT</button>
+    <div id="slider"></div>
+    <div class="controllers">
+        <p>Set these numbers (1-10)</p>
+        <p id="A">RGB</p><input type="text" class="inputBox" id="inputA" placeholder="0.0"/>
+        <p id="B">x - Stretch</p><input type="text" class="inputBox" id="inputB" placeholder="0.0"/>
+        <p id="C">Y - Stretch</p><input type="text" class="inputBox" id="inputC" placeholder="0.0"/>
+        <p id="D">Warp</p><input type="text" class="inputBox" id="inputD" placeholder="0.0"/>
+        <p id="E">Randomness</p><input type="text" class="inputBox" id="inputE" placeholder="0.0"/>
+    <!-- <p id="F">RGB</p><input type="text" class="inputBox" id="inputF" placeholder="0.0"/> -->
+    </div>
+</body>
+</html>

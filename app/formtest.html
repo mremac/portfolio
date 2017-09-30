@@ -1,0 +1,455 @@
+<html>
+<head>
+  <title>Client Checklist</title>
+  <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>
+  <script src="https://wtlv1-d0df.restdb.io/assets/js/jquery-serialize-object.min.js"></script>
+  <script src="https://wtlv1-d0df.restdb.io/assets/js/jquery.datetimepicker.full.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.5.1/lodash.min.js"></script>
+</head>
+<body>
+    <div id="page">
+    <header class="clearfix">
+    <img class="logo" src="http://www.willtaylor.cc/wp-content/uploads/2016/05/wt-logo-2.png">
+    <h1>WTL Client Upload Checklist</h1>
+    </header>
+    
+<form role="form" id="checklist-accounts-non-software-form">
+<div class="form-group">
+  <label>Client name: </label><input id="client_name" class="form-control" name="client_name" data-type="text" type="text" disabled>
+</div>
+<div class="form-group">
+  <label>Bank statements: </label><input class="form-control" name="bank_statements" data-type="file" type="file" multiple>
+  <div class="progress hidden">
+    <div id="bank_statements_progress" class="progress-bar" role="progressbar" aria-valuenow="0"
+    aria-valuemin="0" aria-valuemax="100" style="width:0">
+      <span class="sr-only">0%</span>
+    </div>
+  </div>        
+</div>
+<div class="form-group" id="VAT_Return">
+  <label>Vat return workings: </label><input class="form-control" name="VAT_return_workings" data-type="file" type="file" multiple>
+  <div class="progress hidden">
+    <div id="VAT_return_workings_progress" class="progress-bar" role="progressbar" aria-valuenow="0"
+    aria-valuemin="0" aria-valuemax="100" style="width:0">
+      <span class="sr-only">0%</span>
+    </div>
+  </div>        
+</div>
+<div class="form-group">
+  <label>Vat adjustments: </label><input class="form-control" name="VAT_adjustments" data-type="file" type="file" multiple>
+  <div class="progress hidden">
+    <div id="VAT_adjustments_progress" class="progress-bar" role="progressbar" aria-valuenow="0"
+    aria-valuemin="0" aria-valuemax="100" style="width:0">
+      <span class="sr-only">0%</span>
+    </div>
+  </div>        
+</div>
+<div class="form-group">
+  <label>Vat digital sales invoices: </label><input class="form-control" name="VAT_digital_sales_invoices" data-type="file" type="file" multiple>
+  <div class="progress hidden">
+    <div id="VAT_digital_sales_invoices_progress" class="progress-bar" role="progressbar" aria-valuenow="0"
+    aria-valuemin="0" aria-valuemax="100" style="width:0">
+      <span class="sr-only">0%</span>
+    </div>
+  </div>        
+</div>
+<div class="form-group" id="VAT_Digital">
+  <label>Vat digitial expenses invoices: </label><input class="form-control" name="VAT_digitial_expenses_invoices" data-type="file" type="file" multiple>
+  <div class="progress hidden">
+    <div id="VAT_digitial_expenses_invoices_progress" class="progress-bar" role="progressbar" aria-valuenow="0"
+    aria-valuemin="0" aria-valuemax="100" style="width:0">
+      <span class="sr-only">0%</span>
+    </div>
+  </div>        
+</div>
+<div class="form-group">
+  <label>Payroll summary: </label><input class="form-control" name="payroll_summary" data-type="file" type="file" multiple>
+  <div class="progress hidden">
+    <div id="payroll_summary_progress" class="progress-bar" role="progressbar" aria-valuenow="0"
+    aria-valuemin="0" aria-valuemax="100" style="width:0">
+      <span class="sr-only">0%</span>
+    </div>
+  </div>        
+</div>
+<div class="form-group">
+  <label>Cash expenses summary: </label><input class="form-control" name="cash_expenses_summary" data-type="file" type="file" multiple>
+  <div class="progress hidden">
+    <div id="cash_expenses_summary_progress" class="progress-bar" role="progressbar" aria-valuenow="0"
+    aria-valuemin="0" aria-valuemax="100" style="width:0">
+      <span class="sr-only">0%</span>
+    </div>
+  </div>        
+</div>
+<div class="form-group">
+  <label>Bank loan statement: </label><input class="form-control" name="bank_loan_statement" data-type="file" type="file" multiple>
+  <div class="progress hidden">
+    <div id="bank_loan_statement_progress" class="progress-bar" role="progressbar" aria-valuenow="0"
+    aria-valuemin="0" aria-valuemax="100" style="width:0">
+      <span class="sr-only">0%</span>
+    </div>
+  </div>        
+</div>
+<div class="form-group">
+  <label>Other loan statements: </label><input class="form-control" name="other_loan_statements" data-type="file" type="file" multiple>
+  <div class="progress hidden">
+    <div id="other_loan_statements_progress" class="progress-bar" role="progressbar" aria-valuenow="0"
+    aria-valuemin="0" aria-valuemax="100" style="width:0">
+      <span class="sr-only">0%</span>
+    </div>
+  </div>        
+</div>
+<div class="form-group">
+  <label>Other information: </label><input class="form-control" name="other_information" data-type="file" type="file" multiple>
+  <div class="progress hidden">
+    <div id="other_information_progress" class="progress-bar" role="progressbar" aria-valuenow="0"
+    aria-valuemin="0" aria-valuemax="100" style="width:0">
+      <span class="sr-only">0%</span>
+    </div>
+  </div>        
+</div>
+<div class="form-group">
+  <label>Notes: </label><textarea id="notes_field" class="form-control" name="notes" data-type="text"></textarea>
+</div><div id="fg-errors" class="form-group">
+</div>
+<div class="form-group">
+<input id="tandc"type="checkbox"  onchange="document.getElementById('btn-submit').disabled = !this.checked;" ><a href="">Please read our Terms & Conditions</a></input>
+</div>
+<button class="btn btn-primary btn-lg" id="btn-submit" type="submit" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Submitting..." disabled>Submit</button> 
+</form>
+
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==" crossorigin="anonymous">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-hQpvDQiCJaD2H465dQfA717v7lu5qHWtDbWNPvaTJ0ID5xnPUlVXnKzq7b8YUkbN" crossorigin="anonymous">
+<link href="https://wtlv1-d0df.restdb.io/assets/css/jquery.datetimepicker.min.css" rel="stylesheet">
+
+<style>
+body {
+    background: #000;
+    color: #FFF;
+}
+.clearfix:after {  content: "."; visibility: hidden; display: block;  height: 0; clear: both; }
+#page {
+    max-width: 50em;
+    margin: 4em auto;
+    font-family: sans-serif;
+    font-size: 1em;
+    text-align: center;
+}
+img {
+    max-width: 15em;
+    float: left;
+}
+h1 {
+    font-size: 1.5em;
+    float: right;
+}
+#content {
+    clear: both;
+    margin-top: 4em;
+    width: 100%;
+}
+  #client_name{
+    background-color:#000;
+    color:#FFF;
+    text-align:center;
+    font-size: 1.5em;
+  }
+  .thank-you{
+    font-size: 16px;
+    padding: 20px;  
+  }
+  #email-metrics-form{
+    padding: 10px;
+  }
+  #email-metrics-form input{
+    width: 300px;
+  }
+  #VAT_Return{
+    margin: 5em 0px 1em 0px;
+  }
+  #VAT_Digital{
+    margin: 1em 0px 5em 0px;
+  }
+  #notes_field{
+    height: 10em;
+    vertical-align: top;
+  }
+  #tandc{
+    margin: 1em;
+  }
+  label{
+    display: block;
+  }
+  .form-control{
+    width: 20em;
+  }
+  .help-block{
+    margin-left:10px;
+  }
+  .progress{
+    width: 300px;
+    height:10px;
+    border-radius:0px;
+    margin-top: 2px;
+  }
+  input{
+      margin: 0px auto 0px auto;
+  }
+  textarea{
+      margin: 0px auto 0px auto;
+  }
+  
+.left {
+    text-align: left;
+}
+.center {
+    text-align: center;
+}
+  #btn-submit{
+      width: 300px;
+  }
+</style>
+
+<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>
+<script src="https://wtlv1-d0df.restdb.io/assets/js/jquery-serialize-object.min.js"></script>
+<script src="https://wtlv1-d0df.restdb.io/assets/js/jquery.datetimepicker.full.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.5.1/lodash.min.js"></script>
+
+<script>
+
+$(function () {
+
+  // put your own error messages and/or message translation logic here
+  
+  window.onload = function() {
+  document.getElementById('client_name').value = getParameterByName('clientname');
+  };
+
+  var errorMessages = {
+    "REQUIRED": "This field is required",
+    "UNIQUE": "This value already exists",
+    "TYPE": "Invalid data type",
+    "REGEX":"Invalid data format",
+    "number": "Must be an integer number",
+    "money": "Must be a number with max two decimals",
+    "JSON":"Not a valid JSON",
+    "float_number":"Must be a decimal number",
+    "email": "Must be a valid email",
+    "FILESIZE": "Upload exceeds file size limit per field (max 5 MB)",
+    "UPLOADERROR": "Unable to upload file, please try again",
+    "GENERIC_ERROR": "A server error occured, please reload page"
+  }
+
+  var successMessage = "Thank you!";
+
+  // enable javascript datetimepicker unless supported
+  // Docs and settings: http://xdsoft.net/jqplugins/datetimepicker/
+
+  $.datetimepicker.setLocale('en');
+
+  // if missing support for datetime, then use jquery.datetimepicker
+
+  if (!Modernizr.inputtypes.datetime){
+      $("input[data-type=date]").datetimepicker({timepicker:false,format:"Y/m/d"}).attr("type","text");
+      $("input[data-type=datetime]").datetimepicker({}).attr("type","text");
+      $("input[data-type=time]").datetimepicker({datepicker:false,format:"H:i",value:"12:00"}).attr("type","text");
+  }
+
+  $("#checklist-accounts-non-software-form input[data-type=file], #checklist-accounts-non-software-form input[data-type=image]").on("change",function(){
+    $(this).data("uploadedfiles",[]);    
+  });
+
+  var apikey = "578b57933f096b114d1eec5a"; // // TODO: INSERT YOUR CORS API KEY HERE
+
+  if (!apikey) alert("Please insert a CORS API key");
+
+  var ajaxSettings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "https://wtlv1-d0df.restdb.io/rest/checklist-accounts-non-software",
+    "method": "POST",
+    "headers": {
+      "x-apikey": apikey,
+      "content-type": "application/json"
+    },
+    "processData": false
+  }
+
+  var ajaxSettingsAttachments = {
+     "async": true,
+     "url": "https://wtlv1-d0df.restdb.io/media",
+     "method": "POST",
+     "contentType": false,
+     "headers": {
+       "x-apikey": apikey
+     },
+     "cache": false,
+     "processData": false
+   }
+  
+  
+  function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+  }
+
+  function uploadAttachment(item){
+    var deferred = $.Deferred();
+    var datatype = $(item).attr("data-type");
+    var element_name = $(item).attr("name");
+    var formData = new FormData();
+    var files = $(item)[0].files;
+    var totalsize = 0;
+    var files_to_upload = []
+    _.each(files,function(file){
+      // ignore non-images
+      if(datatype==="image" && !file.type.match('image.*')){
+        return;
+      }else{
+        files_to_upload.push(file);
+        totalsize += file.size;        
+      }
+    });
+
+    // check max upload file size for basic plan
+    if (totalsize<=5000000){
+      _.each(files_to_upload,function(file){
+        formData.append(element_name, file, file.name);
+      });
+      var asa = _.clone(ajaxSettingsAttachments);
+      asa.xhr = function() {
+        var xhr = new window.XMLHttpRequest();
+        xhr.upload.addEventListener("progress", function(evt) {
+          if (evt.lengthComputable) {
+            var percentComplete = evt.loaded / evt.total;
+            percentComplete = parseInt(percentComplete * 100)+"%";
+            $("#"+element_name+"_progress")
+            .css("width",percentComplete)
+          }
+        }, false);
+        return xhr;
+      }
+      asa.data = formData;
+      var uploadedbefore = $(item).data("uploaded");
+      if (!uploadedbefore){
+        $("#"+element_name+"_progress").parent().removeClass("hidden");
+        $("#btn-submit").button("loading");
+        $.ajax(asa)
+        .success(function(data){
+          var result = data.ids || [];
+          var successObj = {};
+          successObj[element_name] = result;
+          $(item).data("uploaded",result);
+          deferred.resolve(successObj);       
+        })
+        .fail(function(){
+          deferred.reject({field: element_name, error: errorMessages.UPLOADERROR});
+        });
+      }else{
+        var obj = {};
+        obj[element_name]=uploadedbefore;
+        deferred.resolve(obj);
+      }
+    }else{
+      deferred.reject({field: element_name, error: errorMessages.FILESIZE});
+    }
+    return deferred.promise();
+  }
+
+  function postForm() {
+    // clear errors
+    $("#checklist-accounts-non-software-form .has-error").removeClass("has-error");
+    $("#checklist-accounts-non-software-form .help-block").remove();
+
+    $("#btn-submit").button("loading");
+
+    // get the form data
+    var formObj = $("#checklist-accounts-non-software-form").serializeObject();
+
+    // get attachments from inputs
+    var attachments = [];
+
+    $("#checklist-accounts-non-software-form input[data-type=file], #checklist-accounts-non-software-form input[data-type=image]").each(function(input){
+      var files = $(this)[0].files;
+      if(files && files.length>0){
+        attachments.push($(this));
+      }
+    });
+
+    var attachFuncs = [];
+    _.each(attachments,function(attachment){
+      attachFuncs.push(uploadAttachment(attachment));
+    });
+  
+    // upload all attachments and return with ids when done
+    $.when.apply(null,attachFuncs)
+      .done(function(){
+        // get the attachment id's from arguments and store into form obj
+
+        _.each(arguments,function(fieldObj){
+          formObj = _.assign(formObj,fieldObj);
+        });
+
+       // submit the whole form with attachment ids 
+
+       ajaxSettings.data = JSON.stringify(formObj);
+        $.ajax(ajaxSettings)
+        .done(function (response) {
+          // replaces form with a thank you message, please replace with your own functionality
+          $("#checklist-accounts-non-software-form").replaceWith("<div class='thank-you'>"+successMessage+"</div>");
+        })
+        .fail(function (response) {
+          $("#btn-submit").button("reset");
+          var error = response.responseJSON;
+          if (error && error.name==="ValidationError"){
+            _.each(error.list,function(fielderr){
+              var inputSelector = "[name="+fielderr.field+"]";
+              var errorMessageCode = fielderr.message[1];
+              var errorMessage = errorMessages[errorMessageCode] || "Invalid value";
+              if (errorMessageCode==="TYPE"){
+                var fieldType = $(inputSelector).data("type");
+                errorMessage = errorMessages[fieldType] || "Invalid value";
+              }
+              $(inputSelector).after("<div class='help-block'>"+errorMessage+"</div>");
+              $(inputSelector).parents(".form-group").addClass("has-error");
+            });
+          }
+          else{
+            var msg = (ajaxSettings.headers["x-apikey"] && ajaxSettings.headers["x-apikey"].length < 24) ? "Missing API-key": "Server Error";
+            alert(msg);
+          }
+        });
+      })
+      .fail( function (response) {
+        $("#btn-submit").button("reset");
+        if (response.field && response.error){
+          var inputSelector = "[name="+response.field+"]";
+          $(inputSelector).after("<div class='help-block'>"+response.error+"</div>");
+          $(inputSelector).parents(".form-group").addClass("has-error");
+        }else{
+          var errorMessage = errorMessages.GENERIC_ERROR || "Problem submitting form";
+          $("#fg-errors").addClass("has-error")
+          .append("<div class='help-block'>"+errorMessage+"</div>");
+        }
+      });
+  };
+
+  $("#checklist-accounts-non-software-form").submit(function (event) {
+  	$('#client_name').removeAttr('disabled');
+        postForm();
+        event.preventDefault();
+        return false;
+    });
+});
+</script>
+</div>
+</body>
+</html>

@@ -1,0 +1,105 @@
+body{
+  background-color:#1F1F1F;
+}
+
+input{
+  width: 3em;
+}
+
+p{
+  position: absolute;
+  top: 1em;
+  left: 1em;
+  margin: 0.5vh;
+}
+
+.controllers{
+  z-index: 10000;
+}
+
+.btn{
+  position: fixed;
+  z-index: 1;
+  float: right;
+  margin: 1em;
+  width: 4em;
+  height: 4em;
+  right: 0;
+}
+
+.inputBox{
+  position: fixed;
+  left: 1em;
+  width: 3em;
+  height: auto;
+  background-color: gray;
+  color: white;
+}
+
+#inputA{
+  top: 6vh;
+}
+
+#inputB{
+  top: 11vh;
+}
+
+#inputC{
+  top: 16vh;
+}
+
+#inputD{
+  top: 21vh;
+}
+
+#inputE{
+  top: 26vh;
+}
+
+#inputF{
+  top: 31vh;
+}
+
+#A, #B, #C, #D, #E, #F{
+  left: 5em;
+}
+
+#A{
+  top: 6vh;
+}
+
+#B{
+  top: 11vh;
+}
+
+#C{
+  top: 16vh;
+}
+
+#D{
+  top: 21vh;
+}
+
+#E{
+  top: 26vh;
+}
+
+#F{
+  top: 31vh;
+}
+
+#canvas{
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+}
+
+#slider{
+  position: fixed;
+  top: 95vh;
+  left: 10vw;
+  width: 80vw;
+  z-index: 10;
+  border: black 2px solid;
+  background-color: rgba(0,0,0,0);
+}
